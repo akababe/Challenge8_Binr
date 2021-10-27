@@ -1,0 +1,275 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Binar Academy Bootcamp challenge chapter 8",
+        "version": "1.0.0",
+        "title": "api-binar-challenge-fsw-ch-8",
+        "termsOfService": "https://websitekamu/linkKeTermOfService",
+        "contact": {
+            "email": "kamu@mail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "host": "api.challenge8.com",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "Player",
+            "description": "Player Resources"
+        }
+    ],
+    "securityDefinitions": {
+        "Token": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization"
+        }
+    },
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/players": {
+            "post": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Login player",
+                "description": "",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Player Object",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string",
+                                    "example": "almas689"
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "example": "almas@gmail.com"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "example": "123"
+                                },
+                                "exp": {
+                                    "type": "integer",
+                                    "example": "32"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Success",
+                        "schema": {
+                            "type": "array",
+                            "items": {}
+                        }
+                    },
+                    "400": {
+                        "description": "Failed"
+                    },
+                    "500": {
+                        "description": "Failed"
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "List all player",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "description": "search by username player",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "search by email",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "experience",
+                        "in": "query",
+                        "description": "search by experience",
+                        "required": false,
+                        "type": "integer"
+                    },
+                    {
+                        "name": "lvl",
+                        "in": "query",
+                        "description": "search by lvl",
+                        "required": false,
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    },
+                    "500": {
+                        "description": "failed"
+                    }
+                }
+            }
+        },
+        "/players/{id}": {
+            "get": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Find player by id",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of player",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    },
+                    "500": {
+                        "description": "Failed"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Update player",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of player",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    },
+                    "500": {
+                        "description": "Failed"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Delete player",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of player",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    },
+                    "400": {
+                        "description": "Failed"
+                    },
+                    "500": {
+                        "description": "Failed"
+                    }
+                }
+            }
+        },
+        "/players/exp/{id}": {
+            "post": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Add player experiance",
+                "description": "",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Player Object",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "exp": {
+                                    "type": "integer",
+                                    "example": "32"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id of player",
+                        "required": true,
+                        "type": "integer"
+                    }
+
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succes"
+                    },
+                    "500": {
+                        "description": "Failed"
+                    }
+                }
+            }
+        }
+    }
+}
