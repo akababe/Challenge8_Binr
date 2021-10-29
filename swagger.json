@@ -1,0 +1,83 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "this is API",
+    "version": "1.0.0",
+    "title": "Nama API Kamu",
+    "termsOfService": "https://websitekamu/linkKeTermOfService",
+    "contact": {
+      "email": "kamu@mail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "api.website-kamu.com",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Article",
+      "description": "Article Resources"
+    }
+  ],
+  "securityDefinitions": {
+    "Token": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "paths": {
+    "/players": {
+      "post": {
+        "tags": [
+          "Article"
+        ],
+        "summary": "Add new article",
+        "description": "Create new",
+        "security": [
+          {
+            "Token": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Article object",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "example": "ristra"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "ristra@mail.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "pass1234"
+                }
+              }
+            }
+          }
+        ],
+        "consumes": [
+          "appliaction/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "Successfully create new article"
+          }
+        }
+      }
+    }
+  }
+}
