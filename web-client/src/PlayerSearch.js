@@ -68,7 +68,7 @@ class PlayerSearch extends React.Component {
               {options.map((option) => <option value={option.value}>{option.label}</option>)}
             </select>
             <input class="form-control" type="text" onChange={this.getData} />
-            <button onClick={() => this.setPrint()} >Search </button>
+            <button class="btn btn-primary" onClick={() => this.setPrint()} >Search </button>
           </div>
           <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
             {this.state.print ? this.printSearch() : null}
