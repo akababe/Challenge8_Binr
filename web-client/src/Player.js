@@ -17,9 +17,12 @@ class App extends React.Component {
     return (
       <Fragment>
         {/* Import component : create player, edit player, search player */}
+        <div class="container" >
         <PlayerCreate/>
         <PlayerEdit/>
         <PlayerSearch/>
+
+        </div>
       </Fragment>
     );
   }
