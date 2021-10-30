@@ -79,15 +79,86 @@
                     "201": {
                         "description": "Success",
                         "schema": {
-                            "type": "array",
-                            "items": {}
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "SCCESS"
+                                },
+                                "message": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "username": {
+                                                "type": "string",
+                                                "example": "almas689"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "example": "almas@gmail.com"
+                                            },
+                                            "password": {
+                                                "type": "string",
+                                                "example": "123"
+                                            },
+                                            "experiance": {
+                                                "type": "integer",
+                                                "example": "0"
+                                            },
+                                            "lvl": {
+                                                "type": "integer",
+                                                "example": "0"
+                                            },
+                                            "craterdAt": {
+                                                "type": "string",
+                                                "example": "2021-10-27T13:00:39.286Z"
+                                            },
+                                            "updatedAt": {
+                                                "type": "string",
+                                                "example": "2021-10-27T13:00:39.286Z"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     },
                     "400": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "username or email or password field cannot be empty."
+                                }
+                            }
+                        }
                     },
                     "500": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Some error occurred while creating the Player"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -132,10 +203,68 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Succes"
+                        "description": "Succes",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "SUCCESS"
+                                },
+                                "message": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "username": {
+                                                "type": "string",
+                                                "example": "almas689"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "example": "almas@gmail.com"
+                                            },
+                                            "password": {
+                                                "type": "string",
+                                                "example": "123"
+                                            },
+                                            "experiance": {
+                                                "type": "integer",
+                                                "example": "0"
+                                            },
+                                            "lvl": {
+                                                "type": "integer",
+                                                "example": "0"
+                                            },
+                                            "craterdAt": {
+                                                "type": "string",
+                                                "example": "2021-10-27T13:00:39.286Z"
+                                            },
+                                            "updatedAt": {
+                                                "type": "string",
+                                                "example": "2021-10-27T13:00:39.286Z"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     },
                     "500": {
-                        "description": "failed"
+                        "description": "failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "example": "Some error occurred while creating the Player"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -161,10 +290,72 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Succes"
+                        "description": "Succes",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "SUCCESS"
+                                },
+                                "message": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer",
+                                                "example": "1"
+                                            },
+                                            "username": {
+                                                "type": "string",
+                                                "example": "almas689"
+                                            },
+                                            "email": {
+                                                "type": "string",
+                                                "example": "almas@gmail.com"
+                                            },
+                                            "password": {
+                                                "type": "string",
+                                                "example": "123"
+                                            },
+                                            "experiance": {
+                                                "type": "integer",
+                                                "example": "0"
+                                            },
+                                            "lvl": {
+                                                "type": "integer",
+                                                "example": "0"
+                                            },
+                                            "craterdAt": {
+                                                "type": "string",
+                                                "example": "2021-10-27T13:00:39.286Z"
+                                            },
+                                            "updatedAt": {
+                                                "type": "string",
+                                                "example": "2021-10-27T13:00:39.286Z"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     },
                     "500": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Error retrieving Player with id=1"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -181,6 +372,33 @@
                         "description": "id of player",
                         "required": true,
                         "type": "integer"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Player Object",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "username": {
+                                    "type": "string",
+                                    "example": "almas689"
+                                },
+                                "email": {
+                                    "type": "string",
+                                    "example": "almas@gmail.com"
+                                },
+                                "password": {
+                                    "type": "string",
+                                    "example": "123"
+                                },
+                                "exp": {
+                                    "type": "integer",
+                                    "example": "32"
+                                }
+                            }
+                        }
                     }
                 ],
                 "produces": [
@@ -188,10 +406,52 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Succes"
+                        "description": "Succes",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "SUCCESS"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Player was updated successfully."
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Cannot update Player with id=1. Maybe Player was not found or req.body is empty!"
+                                }
+                            }
+                        }
                     },
                     "500": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Error updating Player with id=1"
+                                }
+                            }
+                        }
                     }
                 }
             },
@@ -215,13 +475,52 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Succes"
+                        "description": "Succes",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "SUCCESS"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Player was deleted successfully!"
+                                }
+                            }
+                        }
                     },
                     "400": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Cannot delete Player with id=1. Maybe Player was not found!"
+                                }
+                            }
+                        }
                     },
                     "500": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Could not delete Player with id=1"
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -256,17 +555,58 @@
                         "required": true,
                         "type": "integer"
                     }
-
                 ],
                 "produces": [
                     "application/json"
                 ],
                 "responses": {
                     "200": {
-                        "description": "Succes"
+                        "description": "Succes",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "SUCCESS"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Player with id=1 has more experience."
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Cannot update Player with id=1!"
+                                }
+                            }
+                        }
                     },
                     "500": {
-                        "description": "Failed"
+                        "description": "Failed",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "result": {
+                                    "type": "string",
+                                    "example": "FAILED"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "example": "Error updating Player exp with id=1"
+                                }
+                            }
+                        }
                     }
                 }
             }
