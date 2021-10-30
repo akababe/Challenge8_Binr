@@ -13,7 +13,7 @@
             "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
         }
     },
-    "host": "api.challenge8.com",
+    "host": "localhost:5000",
     "basePath": "/api",
     "tags": [
         {
@@ -28,10 +28,7 @@
             "name": "Authorization"
         }
     },
-    "schemes": [
-        "https",
-        "http"
-    ],
+
     "paths": {
         "/players": {
             "post": {
