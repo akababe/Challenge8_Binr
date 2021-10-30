@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-node_modules
-package-lock.json
-=======
 node_modules
 package-lock.json
 db.config.js
->>>>>>> baf648225364f9445b88ec44af4bd35447881e3d
+
